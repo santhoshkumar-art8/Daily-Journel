@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+
+<h1>My Writing Journal </h1><br>
+
+<h3 >Morning Routine</h3><br>
+<ul>
+    <li>6 Am - wake up go for a run</li>
+    <li>6.30 Am - stretch/Yoga</li>
+    <li>6.45 Am - get dressed and ready</li>
+    <li>7 Am - journal entry</li>
+</ul>
+
+<% newone.forEach(function(ele){ %>
+<h1><%= ele.title %></h1>
+
+<p><%=ele.post.substring(0,100)+"..."%>
+<a href="/new/<%=ele.title%>">ream more</a></p>
+<% }); %>
+
+<%- include('footer'); -%>
